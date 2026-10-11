@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Юля — сайти-односторінковики під ключ</title>
+<meta name="description" content="Створюю сучасні односторінкові сайти, які виділяють ваш бізнес, викликають довіру та допомагають перетворювати відвідувачів на клієнтів. Готово за 2–3 дні, від $250.">
+<meta name="theme-color" content="#F5FAFF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:title" content="Юля — сайти-односторінковики під ключ">
+<meta property="og:description" content="Створюю сучасні односторінкові сайти, які виділяють ваш бізнес, викликають довіру та допомагають перетворювати відвідувачів на клієнтів. Готово за 2–3 дні, від $250.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2379C8FF'/%3E%3Cstop%20offset='.55'%20stop-color='%23328BFF'/%3E%3Cstop%20offset='1'%20stop-color='%231F66D6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='64'%20height='64'%20rx='18'%20fill='url%28%23g%29'/%3E%3Ctext%20x='32'%20y='44'%20text-anchor='middle'%20font-family='Arial%2CHelvetica%2Csans-serif'%20font-weight='700'%20font-size='34'%20fill='%23fff'%3E%D0%AE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5FAFF;font-family:'Manrope',sans-serif;color:#122B59}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#1F66D6}a:hover{color:#122B59}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes floatY2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(36px,-24px) scale(1.08)}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes reveal{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(50,139,255,.5)}70%{box-shadow:0 0 0 16px rgba(50,139,255,0)}100%{box-shadow:0 0 0 0 rgba(50,139,255,0)}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.31s}.d4{animation-delay:.46s}.d5{animation-delay:.6s}.d6{animation-delay:.74s}
+.float-a{animation:floatY 7s ease-in-out infinite}
+.float-b{animation:floatY2 6s ease-in-out infinite}
+.float-c{animation:floatY 5.5s ease-in-out infinite .8s}
+.blob{animation:drift 16s ease-in-out infinite}
+.blob2{animation:drift 20s ease-in-out infinite reverse}
+.grad-anim{background-size:260% 260%;animation:gradientShift 16s ease infinite}
+.marquee{animation:marquee 40s linear infinite}
+.grad-text{background-image:linear-gradient(90deg,#1F66D6,#328BFF 55%,#4FA9FF);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.06em}
+.tilt{transform:perspective(1600px) rotateY(-13deg) rotateX(5deg);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.tilt:hover{transform:perspective(1600px) rotateY(-3deg) rotateX(1deg) translateY(-6px)}
+.lift{box-shadow:0 14px 40px rgba(18,43,89,.07);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease}
+.lift:hover{transform:translateY(-10px) rotateX(4deg);box-shadow:0 30px 64px rgba(18,43,89,.16)}
+.lift-glass{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.lift-glass:hover{transform:translateY(-10px) rotateX(5deg)}
+.mock-hover{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.mock-hover:hover{transform:perspective(1800px) rotateX(3deg) translateY(-8px)}
+.btn-glow{box-shadow:0 12px 32px rgba(50,139,255,.42);transition:transform .25s ease,box-shadow .25s ease}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 18px 48px rgba(50,139,255,.65)}
+.btn-white{box-shadow:0 12px 36px rgba(255,255,255,.28);transition:transform .25s ease,box-shadow .25s ease}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 18px 52px rgba(255,255,255,.5)}
+.btn-soft{transition:transform .25s ease}
+.btn-soft:hover{transform:translateY(-2px)}
+.pulse{animation:pulse 2.4s ease-out infinite}
+.field:focus{outline:3px solid #79C8FF;outline-offset:2px}
+@supports (animation-timeline: view()){
+.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 24%}
+.line-grow{transform-origin:top;animation:grow linear both;animation-timeline:view();animation-range:entry 20% cover 70%}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="top" style="width: 100%; background: #F5FAFF; font-family: 'Manrope', sans-serif; color: #122B59">
+
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(245, 250, 255, 0.78); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(121, 200, 255, 0.35)">
+<nav aria-label="Головне меню" style="max-width: 1240px; margin: 0 auto; padding: 12px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #122B59">
+<div style="width: 44px; height: 44px; border-radius: 14px; background-image: linear-gradient(135deg, #79C8FF, #328BFF 55%, #1F66D6); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px; box-shadow: 0 8px 20px rgba(50, 139, 255, 0.4)">Ю</div>
+<div style="display: flex; flex-direction: column; line-height: 1.2">
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 18px">Юля</div>
+<div style="font-size: 13px; color: #3D5583">сайти-односторінковики</div>
+</div>
+</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2px 26px; font-weight: 600; font-size: 15px">
+<a href="#features" style="text-decoration: none; color: #122B59; padding: 12px 0">Можливості</a>
+<a href="#process" style="text-decoration: none; color: #122B59; padding: 12px 0">Етапи</a>
+<a href="#projects" style="text-decoration: none; color: #122B59; padding: 12px 0">Проєкти</a>
+<a href="#price" style="text-decoration: none; color: #122B59; padding: 12px 0">Вартість</a>
+<a href="#faq" style="text-decoration: none; color: #122B59; padding: 12px 0">Питання</a>
+<a href="#contact" class="btn-glow" style="text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 13px 22px; border-radius: 999px; font-weight: 700">Хочу такий сайт</a>
+</div>
+</nav>
+</header>
+
+<section style="position: relative; overflow: hidden; padding: 64px 20px 96px; background: #F5FAFF">
+<div aria-hidden="true" class="blob" style="position: absolute; width: 620px; height: 620px; right: -160px; top: -180px; border-radius: 50%; background-image: radial-gradient(circle, rgba(121, 200, 255, 0.6), rgba(121, 200, 255, 0) 68%)"></div>
+<div aria-hidden="true" class="blob2" style="position: absolute; width: 520px; height: 520px; left: -200px; bottom: -220px; border-radius: 50%; background-image: radial-gradient(circle, rgba(50, 139, 255, 0.28), rgba(50, 139, 255, 0) 68%)"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(rgba(18, 43, 89, 0.07) 1px, transparent 1px); background-size: 28px 28px"></div>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 56px">
+
+<div style="flex: 1 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div class="rise" style="align-self: flex-start; display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); border: 1px solid #CDE4FA; border-radius: 999px; padding: 8px 16px 8px 10px; font-size: 14px; font-weight: 700; color: #122B59; box-shadow: 0 8px 24px rgba(18, 43, 89, 0.06)">
+<div class="pulse" style="width: 10px; height: 10px; border-radius: 50%; background: #328BFF; margin-left: 4px"></div>
+<div>Односторінкові сайти під ключ</div>
+</div>
+<h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(30px, 3.9vw, 54px); line-height: 1.1; letter-spacing: -0.02em; color: #122B59">
+<span class="rise d1" style="display: block">Сайти, в які</span>
+<span class="rise d2 grad-text" style="display: block">закохуються</span>
+<span class="rise d3" style="display: block">з першого кліку</span>
+</h1>
+<p class="rise d4" style="margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.65; color: #3D5583; max-width: 580px">Створюю сучасні односторінкові сайти, які виділяють ваш бізнес, викликають довіру та допомагають перетворювати відвідувачів на клієнтів.</p>
+<div class="rise d5" style="display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#contact" class="btn-glow" style="display: flex; align-items: center; gap: 10px; text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 18px 30px; border-radius: 999px; font-weight: 800; font-size: 17px">Хочу такий сайт <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#projects" class="btn-soft" style="display: flex; align-items: center; gap: 10px; text-decoration: none; background: rgba(255, 255, 255, 0.85); color: #122B59; border: 1.5px solid #B9DCFA; padding: 16.5px 28px; border-radius: 999px; font-weight: 700; font-size: 17px">Переглянути проєкти</a>
+</div>
+<div class="rise d6" style="display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; font-weight: 600; color: #122B59">
+<div style="display: flex; align-items: center; gap: 8px"><div style="width: 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>Під будь-який запит</div>
+<div style="display: flex; align-items: center; gap: 8px"><div style="width: 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>Готово за 2–3 дні</div>
+<div style="display: flex; align-items: center; gap: 8px"><div style="width: 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>Від вас — текст, тема і фото</div>
+</div>
+</div>
+
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<div aria-hidden="true" style="position: relative; width: 100%; max-width: 600px; aspect-ratio: 6 / 5; container-type: inline-size">
+<div style="position: absolute; left: 10%; top: 8%; width: 80%; height: 84%; border-radius: 50%; background-image: radial-gradient(circle, rgba(50, 139, 255, 0.42), rgba(121, 200, 255, 0.22) 42%, rgba(245, 250, 255, 0) 70%)"></div>
+<div style="position: absolute; left: 14%; top: 10%; width: 72%; aspect-ratio: 1 / 1; border-radius: 50%; border: 1px dashed rgba(50, 139, 255, 0.35)"></div>
+
+<div data-device="desktop" style="display: contents">
+<div class="float-a" style="position: absolute; left: 3%; top: 14%; width: 80%; z-index: 2">
+<div class="tilt">
+<div style="background: #0F1E3D; border-radius: 2.2cqw 2.2cqw 0.8cqw 0.8cqw; padding: 1.3cqw 1.3cqw 1.7cqw; box-shadow: 0 4cqw 9cqw rgba(18, 43, 89, 0.3)">
+<div style="font-size: 1.42cqw; background: #FFFFFF; border-radius: 0.9cqw; overflow: hidden; aspect-ratio: 16 / 10; display: flex; flex-direction: column; color: #122B59; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1.1em 2em; border-bottom: 1px solid #E6F1FC">
+<div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.1em"><div style="width: 1.4em; height: 1.4em; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>Хмаринка</div>
+<div style="display: flex; gap: 1.6em; font-size: 0.85em; color: #3D5583"><div>Меню</div><div>Про нас</div><div>Контакти</div></div>
+<div style="font-size: 0.8em; font-weight: 700; color: #FFFFFF; background: #1F66D6; padding: 0.5em 1.1em; border-radius: 2em">Замовити</div>
+</div>
+<div style="display: flex; gap: 1.6em; padding: 1.4em 2em; align-items: center; flex: 1 1 auto">
+<div style="flex: 1.15 1 0; display: flex; flex-direction: column; gap: 0.8em">
+<div style="align-self: flex-start; font-size: 0.7em; font-weight: 700; color: #1F66D6; background: #E3F3FF; padding: 0.4em 0.9em; border-radius: 2em">Кав’ярня біля дому</div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 2em; line-height: 1.12">Кава, яку хочеться повторити</div>
+<div style="font-size: 0.85em; line-height: 1.5; color: #3D5583">Свіже обсмаження, домашні десерти та затишні сніданки щодня.</div>
+<div style="display: flex; gap: 0.6em; margin-top: 0.3em"><div style="font-size: 0.8em; font-weight: 700; color: #FFFFFF; background-image: linear-gradient(135deg, #328BFF, #1F66D6); padding: 0.7em 1.3em; border-radius: 2em">Дивитися меню</div><div style="font-size: 0.8em; font-weight: 700; color: #122B59; border: 1px solid #CDE4FA; padding: 0.65em 1.2em; border-radius: 2em">Як дістатися</div></div>
+</div>
+<div style="flex: 1 1 0; height: 12.5em; border-radius: 1.4em; background-image: linear-gradient(145deg, #CDEFFF, #79C8FF 60%, #328BFF); position: relative; display: flex; align-items: center; justify-content: center">
+<svg style="width: 5.5em; height: 5.5em" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M8 3c0 1 1 1.5 1 2.5S8 7 8 7M12 3c0 1 1 1.5 1 2.5S12 7 12 7"></path></svg>
+<div style="position: absolute; left: -1em; bottom: 1.2em; background: #FFFFFF; border-radius: 0.9em; padding: 0.6em 0.9em; font-size: 0.75em; font-weight: 700; box-shadow: 0 0.8em 1.6em rgba(18, 43, 89, 0.15)">Свіжа випічка</div>
+</div>
+</div>
+<div style="display: flex; gap: 1em; padding: 0 2em 1.5em">
+<div style="flex: 1 1 0; display: flex; align-items: center; gap: 0.7em; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB"><div style="width: 2.2em; height: 2.2em; border-radius: 0.7em; background: #CDEFFF"></div><div style="font-size: 0.8em; font-weight: 700">Капучино</div></div>
+<div style="flex: 1 1 0; display: flex; align-items: center; gap: 0.7em; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB"><div style="width: 2.2em; height: 2.2em; border-radius: 0.7em; background: #79C8FF"></div><div style="font-size: 0.8em; font-weight: 700">Десерти</div></div>
+<div style="flex: 1 1 0; display: flex; align-items: center; gap: 0.7em; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB"><div style="width: 2.2em; height: 2.2em; border-radius: 0.7em; background: #328BFF"></div><div style="font-size: 0.8em; font-weight: 700">Сніданки</div></div>
+</div>
+</div>
+</div>
+<div style="height: 1.6cqw; margin: 0 -5%; background-image: linear-gradient(180deg, #E8F1FB, #B7CBE3); border-radius: 0 0 2cqw 2cqw"></div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: 2%; bottom: 2%; width: 25%; z-index: 3">
+<div style="font-size: 1.06cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.34)">
+<div style="position: relative; background: #FFFFFF; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #122B59; font-family: 'Manrope', sans-serif">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>Хмаринка</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #CDEFFF, #79C8FF 60%, #328BFF); display: flex; align-items: center; justify-content: center"><svg style="width: 5em; height: 5em" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M8 3c0 1 1 1.5 1 2.5S8 7 8 7M12 3c0 1 1 1.5 1 2.5S12 7 12 7"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.75em; line-height: 1.15">Кава, яку хочеться повторити</div>
+<div style="font-size: 0.95em; line-height: 1.5; color: #3D5583">Свіже обсмаження та домашні десерти щодня.</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background-image: linear-gradient(135deg, #328BFF, #1F66D6); padding: 0.9em; border-radius: 2em">Дивитися меню</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB; display: flex; flex-direction: column; gap: 0.5em"><div style="width: 2em; height: 2em; border-radius: 0.6em; background: #CDEFFF"></div><div style="font-size: 0.85em; font-weight: 700">Капучино</div></div><div style="flex: 1 1 0; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB; display: flex; flex-direction: column; gap: 0.5em"><div style="width: 2em; height: 2em; border-radius: 0.6em; background: #79C8FF"></div><div style="font-size: 0.85em; font-weight: 700">Десерти</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-device="mobile" style="display: none">
+<div class="float-b" style="position: absolute; left: 3%; top: 16%; width: 40%; z-index: 1">
+<div style="font-size: 1.05cqw; transform: rotate(-7deg); background: #0F1E3D; border-radius: 2.6em; padding: 1.1em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.26)">
+<div style="background: #FFFFFF; border-radius: 1.6em; overflow: hidden; aspect-ratio: 3 / 4; padding: 2em; display: flex; flex-direction: column; gap: 1.2em; color: #122B59; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.2em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>Хмаринка</div><div style="display: flex; gap: 1.2em; font-size: 0.9em; color: #3D5583"><div>Меню</div><div>Про нас</div></div></div>
+<div style="height: 14em; flex: 0 0 14em; border-radius: 1.4em; background-image: linear-gradient(145deg, #CDEFFF, #79C8FF 60%, #328BFF)"></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 2em; line-height: 1.15">Кава, яку хочеться повторити</div>
+<div style="display: flex; gap: 1em"><div style="flex: 1 1 0; height: 5em; border-radius: 1em; background: #E6F6FF"></div><div style="flex: 1 1 0; height: 5em; border-radius: 1em; background: #CDEFFF"></div></div>
+</div>
+</div>
+</div>
+
+<div class="float-a" style="position: absolute; left: 36%; top: 2%; width: 33.5%; z-index: 3">
+<div style="font-size: 1.42cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 5em rgba(18, 43, 89, 0.36)">
+<div style="position: relative; background: #FFFFFF; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #122B59; font-family: 'Manrope', sans-serif">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>Хмаринка</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #122B59"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #CDEFFF, #79C8FF 60%, #328BFF); display: flex; align-items: center; justify-content: center"><svg style="width: 5em; height: 5em" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"></path><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"></path><path d="M8 3c0 1 1 1.5 1 2.5S8 7 8 7M12 3c0 1 1 1.5 1 2.5S12 7 12 7"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.75em; line-height: 1.15">Кава, яку хочеться повторити</div>
+<div style="font-size: 0.95em; line-height: 1.5; color: #3D5583">Свіже обсмаження та домашні десерти щодня.</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background-image: linear-gradient(135deg, #328BFF, #1F66D6); padding: 0.9em; border-radius: 2em">Дивитися меню</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB; display: flex; flex-direction: column; gap: 0.5em"><div style="width: 2em; height: 2em; border-radius: 0.6em; background: #CDEFFF"></div><div style="font-size: 0.85em; font-weight: 700">Капучино</div></div><div style="flex: 1 1 0; padding: 0.8em; border-radius: 1em; background: #F5FAFF; border: 1px solid #E1EEFB; display: flex; flex-direction: column; gap: 0.5em"><div style="width: 2em; height: 2em; border-radius: 0.6em; background: #79C8FF"></div><div style="font-size: 0.85em; font-weight: 700">Десерти</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="float-c" style="position: absolute; left: 0; bottom: 3%; z-index: 4">
+<div style="font-size: 1.9cqw; background: rgba(255, 255, 255, 0.66); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: 1.2em; padding: 0.9em 1.1em; box-shadow: 0 1.6em 3em rgba(18, 43, 89, 0.14); display: flex; flex-direction: column; gap: 0.6em">
+<div style="font-weight: 800; font-size: 0.8em; color: #122B59">Палітра сайту</div>
+<div style="display: flex; gap: 0.4em"><div style="width: 1.8em; height: 1.8em; border-radius: 50%; background: #F5FAFF; border: 1px solid #CDE4FA"></div><div style="width: 1.8em; height: 1.8em; border-radius: 50%; background: #CDEFFF"></div><div style="width: 1.8em; height: 1.8em; border-radius: 50%; background: #79C8FF"></div><div style="width: 1.8em; height: 1.8em; border-radius: 50%; background: #328BFF"></div><div style="width: 1.8em; height: 1.8em; border-radius: 50%; background: #122B59"></div></div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: 0; top: 2%; z-index: 4">
+<div style="font-size: 1.9cqw; display: flex; align-items: center; gap: 0.6em; background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: 2em; padding: 0.6em 1.1em 0.6em 0.6em; box-shadow: 0 1.4em 2.8em rgba(18, 43, 89, 0.14); font-weight: 800; color: #122B59">
+<div style="width: 1.9em; height: 1.9em; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF); display: flex; align-items: center; justify-content: center"><svg style="width: 1.1em; height: 1.1em" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
+<div id="device-label" style="font-size: 0.85em">Версія для комп’ютера</div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<div role="group" aria-label="Версія міні-сайту" style="display: flex; gap: 4px; padding: 5px; border-radius: 999px; background: rgba(255, 255, 255, 0.8); border: 1px solid #CDE4FA; box-shadow: 0 10px 30px rgba(18, 43, 89, 0.08); backdrop-filter: blur(12px)">
+<button type="button" data-device-btn="desktop" aria-pressed="true" style="display: flex; align-items: center; gap: 8px; border: 0; cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px; padding: 11px 20px; min-height: 44px; border-radius: 999px; background: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; transition: background 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.5"></rect><path d="M2 19h20"></path></svg>Комп’ютер</button>
+<button type="button" data-device-btn="mobile" aria-pressed="false" style="display: flex; align-items: center; gap: 8px; border: 0; cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px; padding: 11px 20px; min-height: 44px; border-radius: 999px; background: transparent; color: #122B59; transition: background 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>Телефон</button>
+</div>
+<div style="font-size: 14px; color: #3D5583; text-align: center">Перемкніть — сайт підлаштується під будь-який екран</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section aria-label="Для кого я роблю сайти" style="padding: 26px 0; background: #FFFFFF; border-top: 1px solid #E1EEFB; border-bottom: 1px solid #E1EEFB; overflow: hidden">
+<div class="marquee" style="display: flex; width: max-content">
+<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(17px, 1.6vw, 22px); color: #122B59; white-space: nowrap">
+<div>Салони краси</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Кав’ярні та кафе</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Магазини</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Експерти та консультанти</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Репетитори</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Фотографи</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Тренери</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Компанії послуг</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Заходи та свята</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+</div>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 28px; padding-right: 28px; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(17px, 1.6vw, 22px); color: #122B59; white-space: nowrap">
+<div>Салони краси</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Кав’ярні та кафе</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Магазини</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Експерти та консультанти</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Репетитори</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Фотографи</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Тренери</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Компанії послуг</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+<div>Заходи та свята</div><div style="width: 10px; height: 10px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF)"></div>
+</div>
+</div>
+</section>
+
+<section id="about" style="padding: 112px 20px 104px; background: #F5FAFF">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 24px 72px; align-items: flex-end">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Підхід</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Ваш бізнес вартий більшого, ніж просто сайт</h2>
+</div>
+<p style="flex: 1 1 420px; min-width: 0; margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.7; color: #3D5583">Я створюю не просто сторінки в інтернеті, а продумані цифрові рішення, які гарно представляють ваш бізнес і допомагають клієнтам зробити вибір на вашу користь.</p>
+</div>
+
+<div class="reveal" style="display: flex; flex-direction: column; gap: 24px">
+<h3 style="margin: 0; font-size: clamp(19px, 1.6vw, 22px); font-weight: 800; color: #122B59">Щоб почати, від вас потрібні лише три речі:</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 22px; perspective: 1200px">
+<div class="lift" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.85); border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="width: 76px; height: 76px; border-radius: 24px; background-image: linear-gradient(145deg, #E9F7FF, #79C8FF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.9), 0 16px 30px rgba(50, 139, 255, 0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M10 13h6M10 17h6"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 40px; color: #CDEFFF">01</div>
+</div>
+<h4 style="margin: 0; font-size: 22px; font-weight: 800; color: #122B59">Текст</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Кілька слів про себе та свої послуги. Можна своїми словами — я перетворю їх на акуратні, зрозумілі блоки.</p>
+</div>
+<div class="lift" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.85); border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="width: 76px; height: 76px; border-radius: 24px; background-image: linear-gradient(145deg, #E9F7FF, #79C8FF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.9), 0 16px 30px rgba(50, 139, 255, 0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 40px; color: #CDEFFF">02</div>
+</div>
+<h4 style="margin: 0; font-size: 22px; font-weight: 800; color: #122B59">Тема</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Чим ви займаєтеся і який настрій хочеться передати: ніжний, строгий, яскравий чи затишний.</p>
+</div>
+<div class="lift" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.85); border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="width: 76px; height: 76px; border-radius: 24px; background-image: linear-gradient(145deg, #E9F7FF, #79C8FF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.9), 0 16px 30px rgba(50, 139, 255, 0.3); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-8 8"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 40px; color: #CDEFFF">03</div>
+</div>
+<h4 style="margin: 0; font-size: 22px; font-weight: 800; color: #122B59">Фотографія</h4>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Ваше фото або фото ваших робіт — те, що хочеться показати майбутнім клієнтам.</p>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; background-image: linear-gradient(120deg, #FFFFFF, #E6F6FF); border: 1px solid #CDE4FA; border-radius: 26px; padding: 24px 30px">
+<div style="flex: 0 0 56px; width: 56px; height: 56px; border-radius: 18px; background-image: linear-gradient(135deg, #2470E6, #1650D0); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(36, 112, 230, 0.35)"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></div>
+<p style="flex: 1 1 320px; margin: 0; font-size: 18px; line-height: 1.6; color: #122B59"><strong>Решта — моя турбота:</strong> структура, дизайн, оформлення текстів і фото, адаптація під телефон і запуск.</p>
+</div>
+</div>
+</section>
+
+<section id="features" style="padding: 0 20px 112px; background: #F5FAFF">
+<div class="grad-anim" style="max-width: 1280px; margin: 0 auto; border-radius: 40px; padding: 88px clamp(20px, 5vw, 72px); background-image: linear-gradient(135deg, #0E2350, #133A7A, #1B55B8, #0E2350); position: relative; overflow: hidden; color: #FFFFFF">
+<div aria-hidden="true" class="blob" style="position: absolute; right: -120px; top: -140px; width: 460px; height: 460px; border-radius: 50%; background-image: radial-gradient(circle, rgba(121, 200, 255, 0.45), rgba(121, 200, 255, 0) 68%)"></div>
+<div aria-hidden="true" class="blob2" style="position: absolute; left: -140px; bottom: -180px; width: 420px; height: 420px; border-radius: 50%; background-image: radial-gradient(circle, rgba(50, 139, 255, 0.5), rgba(50, 139, 255, 0) 68%)"></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 52px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #CDEFFF"><div style="width: 28px; height: 2px; background: #79C8FF"></div>Що ви отримуєте</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #FFFFFF">Один сайт. Безліч можливостей</h2>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: #E3F1FF">Усе, що потрібно, щоб клієнти знайшли вас, зрозуміли вашу пропозицію та залишили заявку.</p>
+</div>
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 20px; perspective: 1200px">
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"></path><circle cx="7.5" cy="11" r="1"></circle><circle cx="10" cy="7" r="1"></circle><circle cx="14.5" cy="7" r="1"></circle></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Індивідуальний дизайн</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Жодних шаблонів: стиль, кольори та шрифти підбираю під вашу справу й настрій.</p>
+</div>
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="1.5"></rect><path d="M6 18h6"></path><rect x="17" y="8" width="5" height="12" rx="1"></rect></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Адаптація під усі пристрої</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Сайт однаково зручний на телефоні, планшеті та комп’ютері.</p>
+</div>
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Продумана структура</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Кожен блок на своєму місці й крок за кроком веде відвідувача до заявки.</p>
+</div>
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h4"></path></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Зручні форми заявок</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Клієнту вистачить кількох дотиків, щоб залишити заявку або написати вам.</p>
+</div>
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Базова SEO-оптимізація</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Заголовки, описи та структура сторінки налаштовані так, щоб пошуковим системам було простіше зрозуміти, про що ваш сайт.</p>
+</div>
+<div class="lift-glass" style="flex: 1 1 300px; min-width: 0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); border-radius: 26px; padding: 30px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 58px; height: 58px; border-radius: 18px; background-image: linear-gradient(145deg, #79C8FF, #328BFF); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 12px 28px rgba(50, 139, 255, 0.45); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"></path><path d="M9 15l-3-3c1-4 4.5-8.5 12-9 0 7.5-5 11-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></div>
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #FFFFFF">Запуск сайту під ключ</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E3F1FF">Ви отримуєте готовий сайт, яким можна одразу ділитися з клієнтами.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="benefits" style="padding: 8px 20px 112px; background: #F5FAFF">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: center">
+<div class="reveal" style="flex: 1 1 500px; min-width: 0; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Навіщо односторінковик</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Ваш сайт має працювати на вас</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex: 0 0 52px; height: 52px; border-radius: 16px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M3 9h18M9 21V9"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #122B59">Зручна презентація послуг</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D5583">Усе про вас і ваші послуги — на одній гарній сторінці, якою приємно поділитися.</p></div>
+</div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex: 0 0 52px; height: 52px; border-radius: 16px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #122B59">Зрозуміла структура</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D5583">Відвідувач одразу бачить, що ви пропонуєте і чому варто обрати саме вас.</p></div>
+</div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex: 0 0 52px; height: 52px; border-radius: 16px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #122B59">Швидкий зв’язок із клієнтом</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D5583">Кнопка месенджера й форма заявки завжди під рукою — клієнт пише вам в один клік.</p></div>
+</div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex: 0 0 52px; height: 52px; border-radius: 16px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #122B59">Можливість запуску реклами</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D5583">Односторінковик — зручна сторінка для реклами в соцмережах і пошуку: усе про вас і кнопка заявки в одному місці.</p></div>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="flex: 1 1 420px; min-width: 0; position: relative; padding: clamp(24px, 3vw, 40px); border-radius: 34px; background-image: linear-gradient(160deg, #E6F6FF, #CDEFFF 70%, #B6E3FF); overflow: hidden">
+<div aria-hidden="true" class="blob" style="position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; background-image: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 68%)"></div>
+<div style="position: relative; display: flex; flex-direction: column; align-items: stretch">
+<div style="font-weight: 800; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F66D6; margin-bottom: 18px">Шлях клієнта</div>
+<div style="display: flex; align-items: center; gap: 16px; background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: 22px; padding: 18px 20px; box-shadow: 0 12px 30px rgba(18, 43, 89, 0.08)">
+<div style="flex: 0 0 48px; height: 48px; border-radius: 15px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 3px"><div style="font-weight: 800; font-size: 17px; color: #122B59">Реклама або соцмережі</div><div style="font-size: 14px; color: #3D5583">Людина бачить ваш допис або оголошення</div></div>
+</div>
+<div aria-hidden="true" style="align-self: flex-start; margin-left: 43px; width: 2px; height: 26px; background-image: linear-gradient(180deg, #79C8FF, #328BFF)"></div>
+<div style="display: flex; align-items: center; gap: 16px; background-image: linear-gradient(135deg, #2470E6, #1650D0); border-radius: 22px; padding: 18px 20px; box-shadow: 0 16px 36px rgba(36, 112, 230, 0.35)">
+<div style="flex: 0 0 48px; height: 48px; border-radius: 15px; background: rgba(255, 255, 255, 0.18); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M7 6.5h.01M10 6.5h.01"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 3px"><div style="font-weight: 800; font-size: 17px; color: #FFFFFF">Ваш сайт</div><div style="font-size: 14px; color: #FFFFFF">Гарно й зрозуміло розповідає про вас</div></div>
+</div>
+<div aria-hidden="true" style="align-self: flex-start; margin-left: 43px; width: 2px; height: 26px; background-image: linear-gradient(180deg, #328BFF, #79C8FF)"></div>
+<div style="display: flex; align-items: center; gap: 16px; background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: 22px; padding: 18px 20px; box-shadow: 0 12px 30px rgba(18, 43, 89, 0.08)">
+<div style="flex: 0 0 48px; height: 48px; border-radius: 15px; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 3px"><div style="font-weight: 800; font-size: 17px; color: #122B59">Заявка</div><div style="font-size: 14px; color: #3D5583">Кілька дотиків — і людина вже пише вам</div></div>
+</div>
+<div aria-hidden="true" style="align-self: flex-start; margin-left: 43px; width: 2px; height: 26px; background-image: linear-gradient(180deg, #79C8FF, #328BFF)"></div>
+<div style="display: flex; align-items: center; gap: 16px; background: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.95); border-radius: 22px; padding: 18px 20px; box-shadow: 0 12px 30px rgba(18, 43, 89, 0.1)">
+<div class="pulse" style="flex: 0 0 48px; height: 48px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"></circle><path d="M2 21a8 8 0 0 1 13.3-6"></path><path d="M16 19l2 2 4-4"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 3px"><div style="font-weight: 800; font-size: 17px; color: #122B59">Новий клієнт</div><div style="font-size: 14px; color: #3D5583">Ви домовляєтеся про зустріч або замовлення</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process" style="padding: 112px 20px; background-image: linear-gradient(180deg, #FFFFFF, #E9F6FF 55%, #F5FAFF)">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 60px">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 760px; text-align: center">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Етапи роботи<div style="width: 28px; height: 2px; background: #328BFF"></div></div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Від ідеї до запуску — все в одних руках</h2>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: #3D5583">Вам не потрібно шукати дизайнера, верстальника й копірайтера. Увесь шлях я проходжу разом із вами.</p>
+</div>
+<div style="position: relative; width: 100%; max-width: 860px; display: flex; flex-direction: column; gap: 22px">
+<div aria-hidden="true" style="position: absolute; left: 27px; top: 28px; bottom: 28px; width: 3px; border-radius: 3px; background: #CDEFFF">
+<div class="line-grow" style="width: 100%; height: 100%; border-radius: 3px; background-image: linear-gradient(180deg, #79C8FF, #328BFF, #1F66D6)"></div>
+</div>
+<div class="reveal" style="position: relative; display: flex; gap: 22px; align-items: flex-start">
+<div class="pulse" style="flex: 0 0 56px; height: 56px; border-radius: 50%; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px">1</div>
+<div class="lift" style="flex: 1 1 auto; min-width: 0; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border: 1px solid #DCEBFA; border-radius: 24px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #122B59">Знайомство та задача</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Ви розповідаєте про свою справу й надсилаєте текст, тему та фотографію. Я уточнюю, що для вас важливо.</p>
+</div>
+</div>
+<div class="reveal" style="position: relative; display: flex; gap: 22px; align-items: flex-start">
+<div style="flex: 0 0 56px; height: 56px; border-radius: 50%; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px">2</div>
+<div class="lift" style="flex: 1 1 auto; min-width: 0; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border: 1px solid #DCEBFA; border-radius: 24px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #122B59">Структура</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Продумую, що і в якому порядку побачить відвідувач, щоб йому було легко обрати вас.</p>
+</div>
+</div>
+<div class="reveal" style="position: relative; display: flex; gap: 22px; align-items: flex-start">
+<div style="flex: 0 0 56px; height: 56px; border-radius: 50%; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px">3</div>
+<div class="lift" style="flex: 1 1 auto; min-width: 0; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border: 1px solid #DCEBFA; border-radius: 24px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #122B59">Дизайн</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Створюю унікальний стиль: кольори, шрифти й акценти, які передають характер вашої справи.</p>
+</div>
+</div>
+<div class="reveal" style="position: relative; display: flex; gap: 22px; align-items: flex-start">
+<div style="flex: 0 0 56px; height: 56px; border-radius: 50%; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 20px">4</div>
+<div class="lift" style="flex: 1 1 auto; min-width: 0; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border: 1px solid #DCEBFA; border-radius: 24px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #122B59">Верстка та адаптація</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Збираю сайт і налаштовую його під телефон, планшет і комп’ютер.</p>
+</div>
+</div>
+<div class="reveal" style="position: relative; display: flex; gap: 22px; align-items: flex-start">
+<div style="flex: 0 0 56px; height: 56px; border-radius: 50%; background-image: linear-gradient(135deg, #79C8FF, #328BFF); color: #122B59; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px rgba(121, 200, 255, 0.35)"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"></path><path d="M9 15l-3-3c1-4 4.5-8.5 12-9 0 7.5-5 11-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></div>
+<div class="lift" style="flex: 1 1 auto; min-width: 0; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(12px); border: 1px solid #B9DCFA; border-radius: 24px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800; color: #122B59">5. Запуск</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3D5583">Сайт готовий: ви отримуєте посилання й одразу можете ділитися ним із клієнтами.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" style="padding: 112px 20px; background: #FFFFFF">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Демо-концепти</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Проєкти, які говорять самі за себе</h2>
+</div>
+<p style="flex: 1 1 360px; min-width: 0; margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: #3D5583">Який вигляд мав би сайт для вашого бізнесу? Оберіть сферу — це демонстраційні концепти, створені для прикладу.</p>
+</div>
+
+<div role="group" aria-label="Сфера бізнесу" style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" data-project-btn="0" aria-pressed="true" style="cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; padding: 12px 22px; min-height: 48px; border-radius: 999px; border: 1.5px solid #1650D0; background: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; transition: background 0.3s ease">Салон краси</button>
+<button type="button" data-project-btn="1" aria-pressed="false" style="cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; padding: 12px 22px; min-height: 48px; border-radius: 999px; border: 1.5px solid #CDE4FA; background: #FFFFFF; color: #122B59; transition: background 0.3s ease">Магазин</button>
+<button type="button" data-project-btn="2" aria-pressed="false" style="cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; padding: 12px 22px; min-height: 48px; border-radius: 999px; border: 1.5px solid #CDE4FA; background: #FFFFFF; color: #122B59; transition: background 0.3s ease">Експерт</button>
+<button type="button" data-project-btn="3" aria-pressed="false" style="cursor: pointer; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16px; padding: 12px 22px; min-height: 48px; border-radius: 999px; border: 1.5px solid #CDE4FA; background: #FFFFFF; color: #122B59; transition: background 0.3s ease">Компанія послуг</button>
+</div>
+
+<div data-project="0">
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div class="reveal" style="flex: 1 1 640px; min-width: 0; padding-bottom: 7%">
+<div class="mock-hover" aria-hidden="true" style="position: relative; container-type: inline-size">
+<div style="font-size: 1.3cqw; background: #FFFFFF; border: 1px solid #DCEBFA; border-radius: 1.6em; overflow: hidden; box-shadow: 0 3em 6em rgba(18, 43, 89, 0.16); color: #4A1D3A; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; gap: 1.2em; padding: 0.9em 1.4em; background: #F1F6FD; border-bottom: 1px solid #E1EEFB">
+<div style="display: flex; gap: 0.5em"><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FF8A7A"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FFC93C"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #2BC48A"></div></div>
+<div style="flex: 1 1 auto; max-width: 26em; margin: 0 auto; text-align: center; font-size: 0.85em; color: #3D5583; background: #FFFFFF; border-radius: 1em; padding: 0.4em 1em">Демо-концепт · Салон краси</div>
+</div>
+<div style="background: #FFF6FA">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1.4em 3em">
+<div style="display: flex; align-items: center; gap: 0.6em; font-weight: 800; font-size: 1.3em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background: #C2347A"></div>Лаванда</div>
+<div style="display: flex; gap: 2em; font-size: 1em"><div>Послуги</div><div>Майстри</div><div>Ціни</div></div>
+<div style="font-size: 0.95em; font-weight: 700; color: #FFFFFF; background: #C2347A; padding: 0.6em 1.3em; border-radius: 2em">Записатися</div>
+</div>
+<div style="display: flex; gap: 3em; padding: 1.6em 3em 2.8em; align-items: center">
+<div style="flex: 1.1 1 0; display: flex; flex-direction: column; gap: 1.1em">
+<div style="align-self: flex-start; font-size: 0.85em; font-weight: 700; color: #C2347A; background: #FFFFFF; padding: 0.45em 1em; border-radius: 2em">Запис онлайн</div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 3em; line-height: 1.1">Краса, у якій вам добре</div>
+<div style="font-size: 1.1em; line-height: 1.55; opacity: 0.8">Манікюр, брови та догляд за обличчям у затишній студії поруч із домом.</div>
+<div style="display: flex; gap: 0.8em; margin-top: 0.4em"><div style="font-size: 1em; font-weight: 700; color: #FFFFFF; background: #C2347A; padding: 0.85em 1.6em; border-radius: 2em">Записатися</div><div style="font-size: 1em; font-weight: 700; background: #FFFFFF; padding: 0.85em 1.6em; border-radius: 2em">Ціни</div></div>
+</div>
+<div style="flex: 1 1 0; height: 20em; border-radius: 1.8em; background-image: linear-gradient(145deg, #F9D9EA, #E9DDFB); position: relative; display: flex; align-items: center; justify-content: center">
+<div style="width: 11em; height: 11em; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 1.6em 3em rgba(18, 43, 89, 0.12)"><svg style="width: 5.5em; height: 5.5em" viewBox="0 0 24 24" fill="none" stroke="#C2347A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></div>
+<div style="position: absolute; left: -1.4em; bottom: 1.8em; background: #FFFFFF; border-radius: 1em; padding: 0.8em 1.1em; font-size: 0.9em; font-weight: 700; box-shadow: 0 1em 2em rgba(18, 43, 89, 0.14); display: flex; align-items: center; gap: 0.6em"><div style="width: 0.7em; height: 0.7em; border-radius: 50%; background: #C2347A"></div>Вільні віконця сьогодні</div>
+</div>
+</div>
+<div style="display: flex; gap: 1.2em; padding: 0 3em 2.6em">
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #F9D9EA"></div><div style="font-weight: 700; font-size: 1em">Манікюр</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #E9DDFB"></div><div style="font-weight: 700; font-size: 1em">Брови та вії</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #F9D9EA"></div><div style="font-weight: 700; font-size: 1em">Догляд за обличчям</div></div>
+</div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: -2%; bottom: -10%; width: 22%">
+<div style="font-size: 0.95cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.34)">
+<div style="position: relative; background: #FFF6FA; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #4A1D3A">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.2em; height: 1.2em; border-radius: 50%; background: #C2347A"></div>Лаванда</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #4A1D3A"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #4A1D3A"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #F9D9EA, #E9DDFB); display: flex; align-items: center; justify-content: center"><svg style="width: 4.5em; height: 4.5em" viewBox="0 0 24 24" fill="none" stroke="#C2347A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.7em; line-height: 1.15">Краса, у якій вам добре</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background: #C2347A; padding: 0.9em; border-radius: 2em">Записатися</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px; background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #1F66D6; background: #FFFFFF; border: 1px solid #CDE4FA; padding: 7px 14px; border-radius: 999px">Демо-концепт</div>
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25; color: #122B59">Студія краси «Лаванда»</h3>
+<div style="font-weight: 800; font-size: 16px; color: #122B59">Для салону краси важливо:</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Атмосферні фото, що передають настрій салону</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Зрозумілий прайс і знайомство з майстрами</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Кнопка запису просто на першому екрані</div></div>
+</div>
+<a href="#contact" class="btn-glow" style="margin-top: 6px; align-self: flex-start; display: flex; align-items: center; gap: 10px; text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 15px 24px; border-radius: 999px; font-weight: 800; font-size: 16px">Хочу схожий сайт <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+<div data-project="1" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div class="reveal" style="flex: 1 1 640px; min-width: 0; padding-bottom: 7%">
+<div class="mock-hover" aria-hidden="true" style="position: relative; container-type: inline-size">
+<div style="font-size: 1.3cqw; background: #FFFFFF; border: 1px solid #DCEBFA; border-radius: 1.6em; overflow: hidden; box-shadow: 0 3em 6em rgba(18, 43, 89, 0.16); color: #4A2A10; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; gap: 1.2em; padding: 0.9em 1.4em; background: #F1F6FD; border-bottom: 1px solid #E1EEFB">
+<div style="display: flex; gap: 0.5em"><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FF8A7A"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FFC93C"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #2BC48A"></div></div>
+<div style="flex: 1 1 auto; max-width: 26em; margin: 0 auto; text-align: center; font-size: 0.85em; color: #3D5583; background: #FFFFFF; border-radius: 1em; padding: 0.4em 1em">Демо-концепт · Магазин</div>
+</div>
+<div style="background: #FFF8EF">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1.4em 3em">
+<div style="display: flex; align-items: center; gap: 0.6em; font-weight: 800; font-size: 1.3em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background: #C2600F"></div>Теплий дім</div>
+<div style="display: flex; gap: 2em; font-size: 1em"><div>Каталог</div><div>Подарунки</div><div>Доставка</div></div>
+<div style="font-size: 0.95em; font-weight: 700; color: #FFFFFF; background: #C2600F; padding: 0.6em 1.3em; border-radius: 2em">До каталогу</div>
+</div>
+<div style="display: flex; gap: 3em; padding: 1.6em 3em 2.8em; align-items: center">
+<div style="flex: 1.1 1 0; display: flex; flex-direction: column; gap: 1.1em">
+<div style="align-self: flex-start; font-size: 0.85em; font-weight: 700; color: #C2600F; background: #FFFFFF; padding: 0.45em 1em; border-radius: 2em">Ручна робота</div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 3em; line-height: 1.1">Свічки для затишних вечорів</div>
+<div style="font-size: 1.1em; line-height: 1.55; opacity: 0.8">Ароматичні свічки та подарункові набори з доставкою.</div>
+<div style="display: flex; gap: 0.8em; margin-top: 0.4em"><div style="font-size: 1em; font-weight: 700; color: #FFFFFF; background: #C2600F; padding: 0.85em 1.6em; border-radius: 2em">До каталогу</div><div style="font-size: 1em; font-weight: 700; background: #FFFFFF; padding: 0.85em 1.6em; border-radius: 2em">Подарунки</div></div>
+</div>
+<div style="flex: 1 1 0; height: 20em; border-radius: 1.8em; background-image: linear-gradient(145deg, #FFE2BF, #FFD3B0); position: relative; display: flex; align-items: center; justify-content: center">
+<div style="width: 11em; height: 11em; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 1.6em 3em rgba(18, 43, 89, 0.12)"><svg style="width: 5.5em; height: 5.5em" viewBox="0 0 24 24" fill="none" stroke="#C2600F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5zM9 7a3 3 0 0 1 6 0"></path></svg></div>
+<div style="position: absolute; left: -1.4em; bottom: 1.8em; background: #FFFFFF; border-radius: 1em; padding: 0.8em 1.1em; font-size: 0.9em; font-weight: 700; box-shadow: 0 1em 2em rgba(18, 43, 89, 0.14); display: flex; align-items: center; gap: 0.6em"><div style="width: 0.7em; height: 0.7em; border-radius: 50%; background: #C2600F"></div>Нова колекція</div>
+</div>
+</div>
+<div style="display: flex; gap: 1.2em; padding: 0 3em 2.6em">
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #FFE2BF"></div><div style="font-weight: 700; font-size: 1em">Ароматичні свічки</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #FFD3B0"></div><div style="font-weight: 700; font-size: 1em">Подарункові набори</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #FFE2BF"></div><div style="font-weight: 700; font-size: 1em">Доставка</div></div>
+</div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: -2%; bottom: -10%; width: 22%">
+<div style="font-size: 0.95cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.34)">
+<div style="position: relative; background: #FFF8EF; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #4A2A10">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.2em; height: 1.2em; border-radius: 50%; background: #C2600F"></div>Теплий дім</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #4A2A10"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #4A2A10"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #FFE2BF, #FFD3B0); display: flex; align-items: center; justify-content: center"><svg style="width: 4.5em; height: 4.5em" viewBox="0 0 24 24" fill="none" stroke="#C2600F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5zM9 7a3 3 0 0 1 6 0"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.7em; line-height: 1.15">Свічки для затишних вечорів</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background: #C2600F; padding: 0.9em; border-radius: 2em">До каталогу</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px; background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #1F66D6; background: #FFFFFF; border: 1px solid #CDE4FA; padding: 7px 14px; border-radius: 999px">Демо-концепт</div>
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25; color: #122B59">Свічкова крамниця «Теплий дім»</h3>
+<div style="font-weight: 800; font-size: 16px; color: #122B59">Для магазину важливо:</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Гарні картки товарів із цінами</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Зрозумілі умови доставки та оплати</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Замовлення в месенджері за кілька дотиків</div></div>
+</div>
+<a href="#contact" class="btn-glow" style="margin-top: 6px; align-self: flex-start; display: flex; align-items: center; gap: 10px; text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 15px 24px; border-radius: 999px; font-weight: 800; font-size: 16px">Хочу схожий сайт <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+<div data-project="2" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div class="reveal" style="flex: 1 1 640px; min-width: 0; padding-bottom: 7%">
+<div class="mock-hover" aria-hidden="true" style="position: relative; container-type: inline-size">
+<div style="font-size: 1.3cqw; background: #FFFFFF; border: 1px solid #DCEBFA; border-radius: 1.6em; overflow: hidden; box-shadow: 0 3em 6em rgba(18, 43, 89, 0.16); color: #1F2A6B; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; gap: 1.2em; padding: 0.9em 1.4em; background: #F1F6FD; border-bottom: 1px solid #E1EEFB">
+<div style="display: flex; gap: 0.5em"><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FF8A7A"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FFC93C"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #2BC48A"></div></div>
+<div style="flex: 1 1 auto; max-width: 26em; margin: 0 auto; text-align: center; font-size: 0.85em; color: #3D5583; background: #FFFFFF; border-radius: 1em; padding: 0.4em 1em">Демо-концепт · Експерт</div>
+</div>
+<div style="background: #F4F5FF">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1.4em 3em">
+<div style="display: flex; align-items: center; gap: 0.6em; font-weight: 800; font-size: 1.3em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background: #4F52D9"></div>Марія К.</div>
+<div style="display: flex; gap: 2em; font-size: 1em"><div>Про мене</div><div>Послуги</div><div>Контакти</div></div>
+<div style="font-size: 0.95em; font-weight: 700; color: #FFFFFF; background: #4F52D9; padding: 0.6em 1.3em; border-radius: 2em">Записатися</div>
+</div>
+<div style="display: flex; gap: 3em; padding: 1.6em 3em 2.8em; align-items: center">
+<div style="flex: 1.1 1 0; display: flex; flex-direction: column; gap: 1.1em">
+<div style="align-self: flex-start; font-size: 0.85em; font-weight: 700; color: #4F52D9; background: #FFFFFF; padding: 0.45em 1em; border-radius: 2em">Кар’єрна консультантка</div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 3em; line-height: 1.1">Знайдемо роботу, яка тішитиме</div>
+<div style="font-size: 1.1em; line-height: 1.55; opacity: 0.8">Допомагаю обрати напрям, скласти резюме та підготуватися до співбесіди.</div>
+<div style="display: flex; gap: 0.8em; margin-top: 0.4em"><div style="font-size: 1em; font-weight: 700; color: #FFFFFF; background: #4F52D9; padding: 0.85em 1.6em; border-radius: 2em">Записатися</div><div style="font-size: 1em; font-weight: 700; background: #FFFFFF; padding: 0.85em 1.6em; border-radius: 2em">Послуги</div></div>
+</div>
+<div style="flex: 1 1 0; height: 20em; border-radius: 1.8em; background-image: linear-gradient(145deg, #DDE0FF, #CDEFFF); position: relative; display: flex; align-items: center; justify-content: center">
+<div style="width: 11em; height: 11em; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 1.6em 3em rgba(18, 43, 89, 0.12)"><svg style="width: 5.5em; height: 5.5em" viewBox="0 0 24 24" fill="none" stroke="#4F52D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"></path></svg></div>
+<div style="position: absolute; left: -1.4em; bottom: 1.8em; background: #FFFFFF; border-radius: 1em; padding: 0.8em 1.1em; font-size: 0.9em; font-weight: 700; box-shadow: 0 1em 2em rgba(18, 43, 89, 0.14); display: flex; align-items: center; gap: 0.6em"><div style="width: 0.7em; height: 0.7em; border-radius: 50%; background: #4F52D9"></div>Онлайн і офлайн</div>
+</div>
+</div>
+<div style="display: flex; gap: 1.2em; padding: 0 3em 2.6em">
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #DDE0FF"></div><div style="font-weight: 700; font-size: 1em">Консультація</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #CDEFFF"></div><div style="font-weight: 700; font-size: 1em">Розбір резюме</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #DDE0FF"></div><div style="font-weight: 700; font-size: 1em">Підготовка до співбесіди</div></div>
+</div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: -2%; bottom: -10%; width: 22%">
+<div style="font-size: 0.95cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.34)">
+<div style="position: relative; background: #F4F5FF; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #1F2A6B">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.2em; height: 1.2em; border-radius: 50%; background: #4F52D9"></div>Марія К.</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #1F2A6B"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #1F2A6B"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #DDE0FF, #CDEFFF); display: flex; align-items: center; justify-content: center"><svg style="width: 4.5em; height: 4.5em" viewBox="0 0 24 24" fill="none" stroke="#4F52D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.7em; line-height: 1.15">Знайдемо роботу, яка тішитиме</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background: #4F52D9; padding: 0.9em; border-radius: 2em">Записатися</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px; background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #1F66D6; background: #FFFFFF; border: 1px solid #CDE4FA; padding: 7px 14px; border-radius: 999px">Демо-концепт</div>
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25; color: #122B59">Кар’єрна консультантка Марія</h3>
+<div style="font-weight: 800; font-size: 16px; color: #122B59">Для експерта важливо:</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Особиста історія та фото, що викликають довіру</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Чіткий перелік послуг і форматів роботи</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Простий запис на консультацію</div></div>
+</div>
+<a href="#contact" class="btn-glow" style="margin-top: 6px; align-self: flex-start; display: flex; align-items: center; gap: 10px; text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 15px 24px; border-radius: 999px; font-weight: 800; font-size: 16px">Хочу схожий сайт <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+<div data-project="3" hidden>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div class="reveal" style="flex: 1 1 640px; min-width: 0; padding-bottom: 7%">
+<div class="mock-hover" aria-hidden="true" style="position: relative; container-type: inline-size">
+<div style="font-size: 1.3cqw; background: #FFFFFF; border: 1px solid #DCEBFA; border-radius: 1.6em; overflow: hidden; box-shadow: 0 3em 6em rgba(18, 43, 89, 0.16); color: #0F4A3A; font-family: 'Manrope', sans-serif">
+<div style="display: flex; align-items: center; gap: 1.2em; padding: 0.9em 1.4em; background: #F1F6FD; border-bottom: 1px solid #E1EEFB">
+<div style="display: flex; gap: 0.5em"><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FF8A7A"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #FFC93C"></div><div style="width: 0.85em; height: 0.85em; border-radius: 50%; background: #2BC48A"></div></div>
+<div style="flex: 1 1 auto; max-width: 26em; margin: 0 auto; text-align: center; font-size: 0.85em; color: #3D5583; background: #FFFFFF; border-radius: 1em; padding: 0.4em 1em">Демо-концепт · Компанія послуг</div>
+</div>
+<div style="background: #F1FBF7">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1.4em 3em">
+<div style="display: flex; align-items: center; gap: 0.6em; font-weight: 800; font-size: 1.3em"><div style="width: 1.3em; height: 1.3em; border-radius: 50%; background: #0F8F6A"></div>Чистий дім</div>
+<div style="display: flex; gap: 2em; font-size: 1em"><div>Послуги</div><div>Ціни</div><div>Контакти</div></div>
+<div style="font-size: 0.95em; font-weight: 700; color: #FFFFFF; background: #0F8F6A; padding: 0.6em 1.3em; border-radius: 2em">Розрахувати</div>
+</div>
+<div style="display: flex; gap: 3em; padding: 1.6em 3em 2.8em; align-items: center">
+<div style="flex: 1.1 1 0; display: flex; flex-direction: column; gap: 1.1em">
+<div style="align-self: flex-start; font-size: 0.85em; font-weight: 700; color: #0F8F6A; background: #FFFFFF; padding: 0.45em 1em; border-radius: 2em">Прибирання під ключ</div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 3em; line-height: 1.1">Чистота вдома без клопоту</div>
+<div style="font-size: 1.1em; line-height: 1.55; opacity: 0.8">Прибирання квартир і офісів, генеральне прибирання та миття вікон.</div>
+<div style="display: flex; gap: 0.8em; margin-top: 0.4em"><div style="font-size: 1em; font-weight: 700; color: #FFFFFF; background: #0F8F6A; padding: 0.85em 1.6em; border-radius: 2em">Розрахувати</div><div style="font-size: 1em; font-weight: 700; background: #FFFFFF; padding: 0.85em 1.6em; border-radius: 2em">Послуги</div></div>
+</div>
+<div style="flex: 1 1 0; height: 20em; border-radius: 1.8em; background-image: linear-gradient(145deg, #C8F0E0, #CDEFFF); position: relative; display: flex; align-items: center; justify-content: center">
+<div style="width: 11em; height: 11em; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 1.6em 3em rgba(18, 43, 89, 0.12)"><svg style="width: 5.5em; height: 5.5em" viewBox="0 0 24 24" fill="none" stroke="#0F8F6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"></path></svg></div>
+<div style="position: absolute; left: -1.4em; bottom: 1.8em; background: #FFFFFF; border-radius: 1em; padding: 0.8em 1.1em; font-size: 0.9em; font-weight: 700; box-shadow: 0 1em 2em rgba(18, 43, 89, 0.14); display: flex; align-items: center; gap: 0.6em"><div style="width: 0.7em; height: 0.7em; border-radius: 50%; background: #0F8F6A"></div>Працюємо у вихідні</div>
+</div>
+</div>
+<div style="display: flex; gap: 1.2em; padding: 0 3em 2.6em">
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #C8F0E0"></div><div style="font-weight: 700; font-size: 1em">Генеральне прибирання</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #CDEFFF"></div><div style="font-weight: 700; font-size: 1em">Після ремонту</div></div>
+<div style="flex: 1 1 0; background: #FFFFFF; border-radius: 1.2em; padding: 1.1em; display: flex; flex-direction: column; gap: 0.8em"><div style="height: 4.5em; border-radius: 0.8em; background: #C8F0E0"></div><div style="font-weight: 700; font-size: 1em">Миття вікон</div></div>
+</div>
+</div>
+</div>
+
+<div class="float-b" style="position: absolute; right: -2%; bottom: -10%; width: 22%">
+<div style="font-size: 0.95cqw; background: #0F1E3D; border-radius: 3.4em; padding: 0.8em; box-shadow: 0 2.4em 4.8em rgba(18, 43, 89, 0.34)">
+<div style="position: relative; background: #F1FBF7; border-radius: 2.7em; overflow: hidden; aspect-ratio: 9 / 19; display: flex; flex-direction: column; gap: 1.1em; padding: 3.2em 1.5em 1.5em; color: #0F4A3A">
+<div style="position: absolute; top: 0.9em; left: 50%; width: 7em; height: 1.5em; margin-left: -3.5em; border-radius: 1em; background: #0F1E3D"></div>
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 0.5em; font-weight: 800; font-size: 1.15em"><div style="width: 1.2em; height: 1.2em; border-radius: 50%; background: #0F8F6A"></div>Чистий дім</div><div style="display: flex; flex-direction: column; gap: 0.3em"><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #0F4A3A"></div><div style="width: 1.6em; height: 0.22em; border-radius: 0.2em; background: #0F4A3A"></div></div></div>
+<div style="height: 11em; flex: 0 0 11em; border-radius: 1.4em; background-image: linear-gradient(145deg, #C8F0E0, #CDEFFF); display: flex; align-items: center; justify-content: center"><svg style="width: 4.5em; height: 4.5em" viewBox="0 0 24 24" fill="none" stroke="#0F8F6A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"></path></svg></div>
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 1.7em; line-height: 1.15">Чистота вдома без клопоту</div>
+<div style="text-align: center; font-weight: 700; font-size: 1em; color: #FFFFFF; background: #0F8F6A; padding: 0.9em; border-radius: 2em">Розрахувати</div>
+<div style="display: flex; gap: 0.7em"><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div><div style="flex: 1 1 0; height: 4em; border-radius: 1em; background: #FFFFFF"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="reveal" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px; background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 28px; padding: 32px">
+<div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #1F66D6; background: #FFFFFF; border: 1px solid #CDE4FA; padding: 7px 14px; border-radius: 999px">Демо-концепт</div>
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25; color: #122B59">Клінінг «Чистий дім»</h3>
+<div style="font-weight: 800; font-size: 16px; color: #122B59">Для компанії послуг важливо:</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Зрозумілий перелік послуг і цін</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Як проходить робота — крок за кроком</div></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><div style="flex: 0 0 26px; height: 26px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 16px; line-height: 1.55; color: #3D5583; padding-top: 2px">Заявка або розрахунок вартості в один клік</div></div>
+</div>
+<a href="#contact" class="btn-glow" style="margin-top: 6px; align-self: flex-start; display: flex; align-items: center; gap: 10px; text-decoration: none; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; padding: 15px 24px; border-radius: 999px; font-weight: 800; font-size: 16px">Хочу схожий сайт <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="price" style="padding: 112px 20px; background: #F5FAFF">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Вартість</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Прозоро й без сюрпризів</h2>
+</div>
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; perspective: 1200px">
+<div class="lift-glass" style="flex: 1 1 400px; min-width: 0; background-image: linear-gradient(135deg, #2470E6, #1650D0); color: #FFFFFF; border-radius: 32px; padding: clamp(28px, 3.4vw, 44px); display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden; box-shadow: 0 24px 60px rgba(36, 112, 230, 0.35)">
+<div aria-hidden="true" style="position: absolute; right: -70px; bottom: -90px; width: 260px; height: 260px; border-radius: 50%; background-image: radial-gradient(circle, rgba(121, 200, 255, 0.75), rgba(121, 200, 255, 0) 70%)"></div>
+<div aria-hidden="true" style="position: absolute; right: 36px; top: 34px; width: 70px; height: 70px; border-radius: 22px; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.3); transform: rotate(14deg)"></div>
+<div style="position: relative; font-weight: 800; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF">Сайт-односторінковик під ключ</div>
+<div style="position: relative; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(36px, 4.2vw, 56px); line-height: 1.05; color: #FFFFFF">від $250</div>
+<p style="position: relative; margin: 0; font-size: 18px; line-height: 1.6; color: #FFFFFF; max-width: 420px">Термін — 2–3 дні. Точну вартість назву, щойно побачу ваш запит.</p>
+<a href="#contact" class="btn-white" style="position: relative; align-self: flex-start; margin-top: 8px; display: flex; align-items: center; gap: 10px; text-decoration: none; background: #FFFFFF; color: #122B59; padding: 17px 28px; border-radius: 999px; font-weight: 800; font-size: 17px">Обговорити проєкт <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="lift" style="flex: 1 1 400px; min-width: 0; background: rgba(255, 255, 255, 0.9); border: 1px solid #DCEBFA; border-radius: 32px; padding: clamp(28px, 3.4vw, 44px); display: flex; flex-direction: column; gap: 22px">
+<h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); color: #122B59">Що входить</h3>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Індивідуальний дизайн під вашу тему</div></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Продумана структура та оформлення текстів і фото</div></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Адаптація під телефон, планшет і комп’ютер</div></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Форма заявки та кнопка месенджера</div></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Базова SEO-оптимізація</div></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><div style="flex: 0 0 30px; height: 30px; border-radius: 50%; background-image: linear-gradient(135deg, #CDEFFF, #79C8FF); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#122B59" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div><div style="font-size: 17px; line-height: 1.5; color: #122B59; padding-top: 3px">Запуск сайту під ключ</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq" style="padding: 104px 20px; background: #FFFFFF">
+<div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div class="reveal" style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #1F66D6"><div style="width: 28px; height: 2px; background: #328BFF"></div>Питання<div style="width: 28px; height: 2px; background: #328BFF"></div></div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; letter-spacing: -0.01em; color: #122B59">Часті запитання</h2>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 12px">
+
+<div style="background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 22px; overflow: hidden">
+<h3 style="margin: 0"><button type="button" data-faq-btn="0" aria-controls="faq-0" aria-expanded="true" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: #122B59"><span>Чи потрібно мені розбиратися в сайтах?</span><span data-faq-icon style="flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center; transform: rotate(45deg); transition: transform 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div id="faq-0"><p style="margin: 0; padding: 0 26px 24px; font-size: 16px; line-height: 1.7; color: #3D5583">Ні. Від вас — лише текст, тема та фотографія. Усе інше, від структури до запуску, я роблю сама.</p></div>
+</div>
+
+<div style="background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 22px; overflow: hidden">
+<h3 style="margin: 0"><button type="button" data-faq-btn="1" aria-controls="faq-1" aria-expanded="false" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: #122B59"><span>Що саме потрібно надіслати?</span><span data-faq-icon style="flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center; transform: rotate(0deg); transition: transform 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div id="faq-1" hidden><p style="margin: 0; padding: 0 26px 24px; font-size: 16px; line-height: 1.7; color: #3D5583">Кілька слів про себе та свої послуги, тему чи настрій майбутнього сайту й фотографії — ваші або ваших робіт. Можна одним повідомленням.</p></div>
+</div>
+
+<div style="background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 22px; overflow: hidden">
+<h3 style="margin: 0"><button type="button" data-faq-btn="2" aria-controls="faq-2" aria-expanded="false" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: #122B59"><span>Чи підійде односторінковик для моєї справи?</span><span data-faq-icon style="flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center; transform: rotate(0deg); transition: transform 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div id="faq-2" hidden><p style="margin: 0; padding: 0 26px 24px; font-size: 16px; line-height: 1.7; color: #3D5583">Так. Я роблю сайти під будь-який запит: для майстрів, експертів, магазинів, компаній послуг, заходів та особистих проєктів.</p></div>
+</div>
+
+<div style="background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 22px; overflow: hidden">
+<h3 style="margin: 0"><button type="button" data-faq-btn="3" aria-controls="faq-3" aria-expanded="false" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: #122B59"><span>Як швидко буде готово?</span><span data-faq-icon style="flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center; transform: rotate(0deg); transition: transform 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div id="faq-3" hidden><p style="margin: 0; padding: 0 26px 24px; font-size: 16px; line-height: 1.7; color: #3D5583">Зазвичай 2–3 дні з моменту, коли в мене є ваші текст, тема та фото.</p></div>
+</div>
+
+<div style="background: #F5FAFF; border: 1px solid #DCEBFA; border-radius: 22px; overflow: hidden">
+<h3 style="margin: 0"><button type="button" data-faq-btn="4" aria-controls="faq-4" aria-expanded="false" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; min-height: 64px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 800; color: #122B59"><span>Чи можна запускати на сайт рекламу?</span><span data-faq-icon style="flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; background: #CDEFFF; display: flex; align-items: center; justify-content: center; transform: rotate(0deg); transition: transform 0.3s ease"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div id="faq-4" hidden><p style="margin: 0; padding: 0 26px 24px; font-size: 16px; line-height: 1.7; color: #3D5583">Так. Односторінковик добре підходить як сторінка для реклами в соцмережах і пошуку: уся інформація про вас і кнопка заявки — в одному місці.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 0 20px 104px; background: #FFFFFF">
+<div class="grad-anim" style="max-width: 1280px; margin: 0 auto; border-radius: 40px; padding: clamp(40px, 6vw, 88px) clamp(20px, 5vw, 72px); background-image: linear-gradient(120deg, #1243B5, #1F66D6, #2470E6, #1243B5); position: relative; overflow: hidden; box-shadow: 0 40px 90px rgba(36, 112, 230, 0.35)">
+<div aria-hidden="true" class="blob" style="position: absolute; right: -140px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background-image: radial-gradient(circle, rgba(121, 200, 255, 0.6), rgba(121, 200, 255, 0) 68%)"></div>
+<div aria-hidden="true" class="blob2" style="position: absolute; left: -160px; bottom: -200px; width: 480px; height: 480px; border-radius: 50%; background-image: radial-gradient(circle, rgba(205, 239, 255, 0.35), rgba(205, 239, 255, 0) 68%)"></div>
+<div style="position: relative; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div class="reveal" style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF"><div style="width: 28px; height: 2px; background: #CDEFFF"></div>Почнемо?</div>
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: clamp(30px, 3.8vw, 52px); line-height: 1.1; letter-spacing: -0.01em; color: #FFFFFF">Створімо сайт, який виділить ваш бізнес</h2>
+<p style="margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; color: #FFFFFF; max-width: 540px">Розкажіть, чим ви займаєтеся, — я запропоную, яким може бути ваш сайт. Обговорення ні до чого не зобов’язує.</p>
+<a href="https://t.me/Juliiiiiaaaa_01?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%AE%D0%BB%D1%8E!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener" class="btn-white" style="align-self: flex-start; display: flex; align-items: center; gap: 12px; text-decoration: none; background: #FFFFFF; color: #122B59; padding: 20px 34px; border-radius: 999px; font-weight: 800; font-size: 19px">Обговорити проєкт <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px">
+<a href="https://t.me/Juliiiiiaaaa_01" target="_blank" rel="noopener" class="btn-soft" style="display: flex; align-items: center; gap: 10px; text-decoration: none; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.35); backdrop-filter: blur(10px); color: #FFFFFF; padding: 12px 18px; min-height: 48px; border-radius: 999px; font-weight: 700; font-size: 15px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>Telegram: @Juliiiiiaaaa_01</a>
+</div>
+</div>
+
+<div id="lead" class="reveal" style="flex: 1 1 400px; min-width: 0">
+<div style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(18px); border-radius: 30px; padding: clamp(24px, 3vw, 36px); box-shadow: 0 24px 60px rgba(10, 30, 80, 0.25)">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px; color: #FFFFFF">Заявка на сайт</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #FFFFFF">Заповніть поля — відкриється Telegram із готовим повідомленням для мене. Залишиться лише натиснути «Надіслати».</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="lead-name" style="font-size: 14px; font-weight: 700; color: #FFFFFF">Як вас звати</label>
+<input id="lead-name" class="field" type="text" name="name" autocomplete="name" placeholder="Ваше ім’я" style="width: 100%; min-height: 52px; padding: 14px 18px; border-radius: 16px; border: 0; background: rgba(255, 255, 255, 0.96); font-family: 'Manrope', sans-serif; font-size: 16px; color: #122B59">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="lead-about" style="font-size: 14px; font-weight: 700; color: #FFFFFF">Чим ви займаєтеся</label>
+<input id="lead-about" class="field" type="text" name="about" placeholder="Наприклад: печу торти на замовлення" style="width: 100%; min-height: 52px; padding: 14px 18px; border-radius: 16px; border: 0; background: rgba(255, 255, 255, 0.96); font-family: 'Manrope', sans-serif; font-size: 16px; color: #122B59">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="lead-wish" style="font-size: 14px; font-weight: 700; color: #FFFFFF">Побажання до сайту <span style="font-weight: 500">(необов’язково)</span></label>
+<textarea id="lead-wish" class="field" name="wish" rows="3" placeholder="Кольори, настрій, що важливо показати" style="width: 100%; padding: 14px 18px; border-radius: 16px; border: 0; background: rgba(255, 255, 255, 0.96); font-family: 'Manrope', sans-serif; font-size: 16px; color: #122B59; resize: vertical"></textarea>
+</div>
+<a id="lead-link" href="https://t.me/Juliiiiiaaaa_01?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D0%AE%D0%BB%D1%8E!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20%D1%81%D0%B0%D0%B9%D1%82." target="_blank" rel="noopener" class="btn-white" style="margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; text-decoration: none; background: #FFFFFF; color: #122B59; border-radius: 999px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 17px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F66D6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>Надіслати заявку в Telegram</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background: #FFFFFF; padding: 32px 20px; border-top: 1px solid #E1EEFB">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 24px; font-size: 14px; color: #3D5583">
+<div style="display: flex; align-items: center; gap: 10px"><div style="width: 32px; height: 32px; border-radius: 10px; background-image: linear-gradient(135deg, #79C8FF, #328BFF 55%, #1F66D6); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 15px">Ю</div><div><strong style="color: #122B59">Юля</strong> · сайти-односторінковики під ключ</div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 20px"><a href="#features" style="color: #3D5583; text-decoration: none; padding: 10px 0">Можливості</a><a href="#projects" style="color: #3D5583; text-decoration: none; padding: 10px 0">Проєкти</a><a href="#faq" style="color: #3D5583; text-decoration: none; padding: 10px 0">Питання</a><a href="#contact" style="color: #3D5583; text-decoration: none; padding: 10px 0">Контакти</a></div>
+<div>© 2026</div>
+</div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var ON_BG = 'linear-gradient(135deg, #2470E6, #1650D0)';
+
+  // Computer / phone preview in the hero
+  var devButtons = document.querySelectorAll('[data-device-btn]');
+  var devBlocks = document.querySelectorAll('[data-device]');
+  var devLabel = document.getElementById('device-label');
+  function setDevice(d) {
+    devBlocks.forEach(function (b) { b.style.display = b.getAttribute('data-device') === d ? 'contents' : 'none'; });
+    devButtons.forEach(function (b) {
+      var on = b.getAttribute('data-device-btn') === d;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.background = on ? ON_BG : 'transparent';
+      b.style.color = on ? '#FFFFFF' : '#122B59';
+    });
+    if (devLabel) devLabel.textContent = d === 'desktop' ? 'Версія для комп’ютера' : 'Версія для телефона';
+  }
+  devButtons.forEach(function (b) {
+    b.addEventListener('click', function () { setDevice(b.getAttribute('data-device-btn')); });
+  });
+
+  // Demo projects tabs
+  var projButtons = document.querySelectorAll('[data-project-btn]');
+  var projPanels = document.querySelectorAll('[data-project]');
+  function setProject(n) {
+    projPanels.forEach(function (p) { p.hidden = p.getAttribute('data-project') !== String(n); });
+    projButtons.forEach(function (b) {
+      var on = b.getAttribute('data-project-btn') === String(n);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.background = on ? ON_BG : '#FFFFFF';
+      b.style.color = on ? '#FFFFFF' : '#122B59';
+      b.style.borderColor = on ? '#1650D0' : '#CDE4FA';
+    });
+  }
+  projButtons.forEach(function (b) {
+    b.addEventListener('click', function () { setProject(b.getAttribute('data-project-btn')); });
+  });
+
+  // FAQ accordion
+  var faqButtons = document.querySelectorAll('[data-faq-btn]');
+  var openFaq = 0;
+  function setFaq(n) {
+    openFaq = n;
+    faqButtons.forEach(function (b) {
+      var i = Number(b.getAttribute('data-faq-btn'));
+      var on = i === n;
+      b.setAttribute('aria-expanded', on ? 'true' : 'false');
+      var icon = b.querySelector('[data-faq-icon]');
+      if (icon) icon.style.transform = on ? 'rotate(45deg)' : 'rotate(0deg)';
+      var panel = document.getElementById('faq-' + i);
+      if (panel) panel.hidden = !on;
+    });
+  }
+  faqButtons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var i = Number(b.getAttribute('data-faq-btn'));
+      setFaq(openFaq === i ? -1 : i);
+    });
+  });
+
+  // Lead form: build a prefilled Telegram message
+  var TG = 'https://t.me/Juliiiiiaaaa_01';
+  var nameEl = document.getElementById('lead-name');
+  var aboutEl = document.getElementById('lead-about');
+  var wishEl = document.getElementById('lead-wish');
+  var leadLink = document.getElementById('lead-link');
+  function updateLead() {
+    var lines = ['Добрий день, Юлю! Хочу замовити сайт.'];
+    var n = nameEl ? nameEl.value.trim() : '';
+    var a = aboutEl ? aboutEl.value.trim() : '';
+    var w = wishEl ? wishEl.value.trim() : '';
+    if (n) lines.push('Мене звати: ' + n);
+    if (a) lines.push('Чим займаюся: ' + a);
+    if (w) lines.push('Побажання: ' + w);
+    if (leadLink) leadLink.href = TG + '?text=' + encodeURIComponent(lines.join('\n'));
+  }
+  [nameEl, aboutEl, wishEl].forEach(function (el) {
+    if (el) { el.addEventListener('input', updateLead); el.addEventListener('change', updateLead); }
+  });
+  updateLead();
+})();
+</script>
+</body>
+</html>
